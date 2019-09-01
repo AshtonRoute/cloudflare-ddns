@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  app:
+    image: docker.home.lan/cloudflare-ddns
+    build: .
+    command: npm start
+    environment:
+      NODE_ENV: development
+
+      CLOUDFLARE_TOKEN: ${CLOUDFLARE_TOKEN}
+      DOMAINS: '*.z7t4v88ds5h8v8kym8ygg3exahn2fx6r.online, z7t4v88ds5h8v8kym8ygg3exahn2fx6r.online'
+    volumes:
+      - ./src:/app/src:rw
+      - ./package.json:/app/package.json:rw
+      - ./yarn.lock:/app/yarn.lock:rw
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro

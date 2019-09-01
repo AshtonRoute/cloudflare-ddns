@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "type": "",
+  "scripts": {
+    "development": "cross-env NODE_ENV=development nodemon src",
+    "production": "cross-env NODE_ENV=production node src",
+    "start": "npm run development"
+  },
+  "dependencies": {
+    "@hapi/joi": "15.1.1",
+    "bluebird": "3.5.5",
+    "cloudflare": "2.6.0",
+    "dns-socket": "4.2.0",
+    "lodash": "4.17.15",
+    "ms": "2.1.2",
+    "parse-domain": "2.3.2"
+  },
+  "devDependencies": {
+    "cross-env": "5.2.1",
+    "nodemon": "1.19.1"
+  }
+}
